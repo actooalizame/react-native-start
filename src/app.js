@@ -11,28 +11,18 @@ import {
   View
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/Ionicons';
-import ArtistBox from './ArtistBox';
+import ArtistList from './ArtistList';
+
 
 export default class musik extends Component {
 
+
   render() {
-    const artist = {
-      image: 'http://lorempixel.com/200/200/sports/Dummy-Text/',
-      name: 'David',
-      likes: 200,
-      comments: 140
-    }
+    
 
     return (
       <View style={styles.container}>
-        <ArtistBox artist={artist}/>
-        <ArtistBox artist={artist}/>
-        <ArtistBox artist={artist}/>
-        <ArtistBox artist={artist}/>
-        <ArtistBox artist={artist}/>
-        <ArtistBox artist={artist}/>
-        <ArtistBox artist={artist}/>
+        <ArtistList />
       </View>
     );
   }
