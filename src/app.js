@@ -19,10 +19,17 @@ export default class musik extends Component {
 
   render() {
     
+    const artist = {
+      image: 'http://lorempixel.com/200/200/sports/Dummy-Text/',
+      name: 'David',
+      likes: 200,
+      comments: 140
+    };
+    const artists = Array(500).fill(artist);
 
     return (
       <View style={styles.container}>
-        <ArtistList />
+        <ArtistList artists={artists}/>
       </View>
     );
   }
