@@ -12,20 +12,23 @@ import {
 } from 'react-native';
 
 import ArtistList from './ArtistList';
+import { getArtists } from './api-client'
 
 
 export default class musik extends Component {
 
+  state = {
+    artists: []
+  }
+
+  componentDidMount(){
+    getArtists()
+      .then(data => this.setState({artists:data}))
+  }
 
   render() {
     
-    const artist = {
-      image: 'http://lorempixel.com/200/200/sports/Dummy-Text/',
-      name: 'David',
-      likes: 200,
-      comments: 140
-    };
-    const artists = Array(500).fill(artist);
+    const artists =  this.state.artists
 
     return (
       <View style={styles.container}>

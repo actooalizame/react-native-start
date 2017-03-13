@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
     elevation: 3
   },
   image: {
-    width: 200,
-    height: 200
+    width: 150,
+    height: 130
   },
   info: {
     flex: 1,
